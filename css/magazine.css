@@ -330,6 +330,8 @@
 .close-thumbs-list{display: flex; justify-self: flex-end; cursor: pointer; margin-bottom: 5px; color: rgb(61, 61, 61);}
 .magazine-viewport .bottom .thumb-slider-main{width: 100%; max-width: 800px; min-width: 600px; overflow-x: auto;}
 .magazine-viewport .bottom .thumb-slider-holder{padding: 5px; border-radius: 5px; width: 100%; box-shadow: 0 0 5px 0 rgba(0,0,0, 0.2); background: rgb(34, 34, 34); display: flex; margin: auto; width: 100%; max-width: 800px; overflow-x: scroll;}
+.magazine-viewport .bottom .thumb-slider-holder::-webkit-scrollbar-track{background: #fff; border-radius: 5px}
+.magazine-viewport .bottom .thumb-slider-holder::-webkit-scrollbar-thumb {background: #888; border-radius: 5px}
 .magazine-viewport .bottom .thumb-slider-holder .image-holder{height: 60px; width: 70px; min-width: 70px; background: white; cursor: pointer;}
 .magazine-viewport .bottom .thumb-slider-holder .image-holder:nth-child(odd){margin-right: 10px;}
 
