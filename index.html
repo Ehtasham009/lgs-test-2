@@ -1,0 +1,330 @@
+<!doctype html>
+<html>
+<head>
+	<title>Lgs</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="icon" type="image/png" href="images/fav-icon.png">
+
+	<script type="text/javascript" src="js/jquery.min.1.7.js"></script>
+	<script type="text/javascript" src="js/jquery-ui-1.8.20.custom.min.js"></script>
+	<script type="text/javascript" src="js/modernizr.2.5.3.min.js"></script>
+	<script type="text/javascript" src="js/hash.js"></script>
+	
+	<link rel="stylesheet" href="scss/style.css">
+</head>
+<body>
+	
+	<div id="canvas" class="flipbook-modal">
+		<div class="thumbs-list-icon">
+			<svg viewBox="0 0 122.36 122.88" height="30px" width="30px">
+				<path class="st0" d="M5.85,0h20.09c3.22,0,5.85,2.63,5.85,5.85v20.09c0,3.22-2.63,5.85-5.85,5.85H5.85C2.63,31.8,0,29.16,0,25.94 V5.85C0,2.63,2.63,0,5.85,0L5.85,0z M96.42,91.08h20.09c3.22,0,5.86,2.63,5.86,5.86v20.09c0,3.22-2.63,5.86-5.86,5.86H96.42 c-3.22,0-5.86-2.63-5.86-5.86V96.94C90.56,93.72,93.2,91.08,96.42,91.08L96.42,91.08z M51.14,91.08h20.09 c3.22,0,5.86,2.63,5.86,5.86v20.09c0,3.22-2.63,5.86-5.86,5.86H51.14c-3.22,0-5.85-2.63-5.85-5.86V96.94 C45.28,93.72,47.92,91.08,51.14,91.08L51.14,91.08z M5.85,91.08h20.09c3.22,0,5.85,2.63,5.85,5.86v20.09 c0,3.22-2.63,5.86-5.85,5.86H5.85c-3.22,0-5.85-2.63-5.85-5.86V96.94C0,93.72,2.63,91.08,5.85,91.08L5.85,91.08z M96.42,45.54 h20.09c3.22,0,5.86,2.63,5.86,5.86v20.09c0,3.22-2.63,5.86-5.86,5.86H96.42c-3.22,0-5.86-2.63-5.86-5.86V51.4 C90.56,48.18,93.2,45.54,96.42,45.54L96.42,45.54z M51.14,45.54h20.09c3.22,0,5.86,2.63,5.86,5.86v20.09 c0,3.22-2.63,5.86-5.86,5.86H51.14c-3.22,0-5.85-2.63-5.85-5.86V51.4C45.28,48.18,47.92,45.54,51.14,45.54L51.14,45.54z M5.85,45.54h20.09c3.22,0,5.85,2.63,5.85,5.86v20.09c0,3.22-2.63,5.86-5.85,5.86H5.85C2.63,77.34,0,74.7,0,71.48V51.4 C0,48.18,2.63,45.54,5.85,45.54L5.85,45.54z M96.42,0h20.09c3.22,0,5.86,2.63,5.86,5.85v20.09c0,3.22-2.63,5.85-5.86,5.85H96.42 c-3.22,0-5.86-2.63-5.86-5.85V5.85C90.56,2.63,93.2,0,96.42,0L96.42,0z M51.14,0h20.09c3.22,0,5.86,2.63,5.86,5.85v20.09 c0,3.22-2.63,5.85-5.86,5.85H51.14c-3.22,0-5.85-2.63-5.85-5.85V5.85C45.28,2.63,47.92,0,51.14,0L51.14,0z" fill="currentcolor"/>
+			</svg>
+		</div>
+		<div class="close-modal-icon">
+			<svg height="30px" id="Layer_1" viewBox="0 0 512 512" width="30px">
+				<path d="M443.6,387.1L312.4,255.4l131.5-130c5.4-5.4,5.4-14.2,0-19.6l-37.4-37.6c-2.6-2.6-6.1-4-9.8-4c-3.7,0-7.2,1.5-9.8,4  L256,197.8L124.9,68.3c-2.6-2.6-6.1-4-9.8-4c-3.7,0-7.2,1.5-9.8,4L68,105.9c-5.4,5.4-5.4,14.2,0,19.6l131.5,130L68.4,387.1  c-2.6,2.6-4.1,6.1-4.1,9.8c0,3.7,1.4,7.2,4.1,9.8l37.4,37.6c2.7,2.7,6.2,4.1,9.8,4.1c3.5,0,7.1-1.3,9.8-4.1L256,313.1l130.7,131.1  c2.7,2.7,6.2,4.1,9.8,4.1c3.5,0,7.1-1.3,9.8-4.1l37.4-37.6c2.6-2.6,4.1-6.1,4.1-9.8C447.7,393.2,446.2,389.7,443.6,387.1z" fill="currentcolor"/>
+			</svg>
+		</div>
+		<div class="magazine-viewport">
+			<div class="container">
+				<div class="magazine">
+					<!-- Next button -->
+					<div ignore="1" class="next-button"></div>
+					<!-- Previous button -->
+					<div ignore="1" class="previous-button"></div>
+				</div>
+			</div>
+			<div class="bottom">
+				<div class="close-thumbs-list">
+					<svg height="30px" id="Layer_1" viewBox="0 0 512 512" width="30px">
+						<path d="M443.6,387.1L312.4,255.4l131.5-130c5.4-5.4,5.4-14.2,0-19.6l-37.4-37.6c-2.6-2.6-6.1-4-9.8-4c-3.7,0-7.2,1.5-9.8,4  L256,197.8L124.9,68.3c-2.6-2.6-6.1-4-9.8-4c-3.7,0-7.2,1.5-9.8,4L68,105.9c-5.4,5.4-5.4,14.2,0,19.6l131.5,130L68.4,387.1  c-2.6,2.6-4.1,6.1-4.1,9.8c0,3.7,1.4,7.2,4.1,9.8l37.4,37.6c2.7,2.7,6.2,4.1,9.8,4.1c3.5,0,7.1-1.3,9.8-4.1L256,313.1l130.7,131.1  c2.7,2.7,6.2,4.1,9.8,4.1c3.5,0,7.1-1.3,9.8-4.1l37.4-37.6c2.6-2.6,4.1-6.1,4.1-9.8C447.7,393.2,446.2,389.7,443.6,387.1z" fill="currentcolor"/>
+					</svg>
+				</div>
+				<div class="thumb-slider-holder">
+					<div class="image-holder">
+						<img src="pages/1-thumb.png" alt="">
+					</div>
+					<div class="image-holder">
+						<img src="pages/2-thumb.png" alt="">
+					</div>
+					<div class="image-holder">
+						<img src="pages/3-thumb.png" alt="">
+					</div>
+					<div class="image-holder">
+						<img src="pages/4-thumb.png" alt="">
+					</div>
+					<div class="image-holder">
+						<img src="pages/5-thumb.png" alt="">
+					</div>
+					<div class="image-holder">
+						<img src="pages/6-thumb.png" alt="">
+					</div>
+					<div class="image-holder">
+						<img src="pages/7-thumb.png" alt="">
+					</div>
+					<div class="image-holder">
+						<img src="pages/7-thumb.png" alt="">
+					</div>
+					<div class="image-holder">
+						<img src="pages/7-thumb.png" alt="">
+					</div>
+					<div class="image-holder">
+						<img src="pages/7-thumb.png" alt="">
+					</div>
+					<div class="image-holder">
+						<img src="pages/7-thumb.png" alt="">
+					</div>
+					<div class="image-holder">
+						<img src="pages/7-thumb.png" alt="">
+					</div>
+					<div class="image-holder">
+						<img src="pages/7-thumb.png" alt="">
+					</div>
+					<div class="image-holder">
+						<img src="pages/7-thumb.png" alt="">
+					</div>
+					<div class="image-holder">
+						<img src="pages/7-thumb.png" alt="">
+					</div>
+					<div class="image-holder">
+						<img src="pages/7-thumb.png" alt="">
+					</div>
+					<div class="image-holder">
+						<img src="pages/7-thumb.png" alt="">
+					</div>
+					<div class="image-holder">
+						<img src="pages/7-thumb.png" alt="">
+					</div>
+					<div class="image-holder">
+						<img src="pages/7-thumb.png" alt="">
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="banner-holder">
+		<div class="image-holder">
+			<img src="images/lgs-bg.gif" alt="">
+		</div>
+		<!-- <video autoplay class="banner-video" id="banner-video" loop muted width="100%"><source src="videos/banner-video.mp4" type="video/mp4" /></video> -->
+		<div class="content-holder">
+			<div class="planet-holder">
+				<div id="marsloc"></div>
+				<div class="logo-holdr">
+					<img src="images/logo.png" alt="">
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<script>
+		
+function loadApp() {
+		let mobileMedia = null;
+
+		mobileMedia = $(window).width() - 50;
+
+		if($(window).width() > 900){
+			mobileMedia = $(window).width() - 200;
+		}
+
+
+		$(".magazine-viewport .container").css({width: mobileMedia, height: mobileMedia / 2});
+		
+		$('#canvas').fadeIn(1000);
+	  
+		var flipbook = $('.magazine');
+	  
+		// Check if the CSS was already loaded
+	   
+	   if (flipbook.width()==0 || flipbook.height()==0) {
+		 setTimeout(loadApp, 10);
+		 return;
+	   }
+	   
+	   // Create the flipbook
+	  
+	   flipbook.turn({
+		   
+		   // Magazine width
+	  
+		   width: mobileMedia,
+	  
+		   // Magazine height
+	  
+		   height: mobileMedia / 2,
+	  
+		   // Duration in millisecond
+	  
+		   duration: 1000,
+	  
+		   // Enables gradients
+	  
+		   gradients: true,
+		   
+		   // Auto center this flipbook
+	  
+		   autoCenter: true,
+	  
+		   // Elevation from the edge of the flipbook when turning a page
+	  
+		   elevation: 50,
+	  
+		   // The number of pages
+	  
+		   pages: 12,
+	  
+		   // Events
+	  
+		   when: {
+			 turning: function(event, page, view) {
+			   
+			   var book = $(this),
+			   currentPage = book.turn('page'),
+			   pages = book.turn('pages');
+		   
+			   // Update the current URI
+	  
+			   Hash.go('page/' + page).update();
+	  
+			   // Show and hide navigation buttons
+	  
+			   disableControls(page);
+	  
+			 },
+	  
+			 turned: function(event, page, view) {
+			
+			   disableControls(page);
+	  
+			   $(this).turn('center');
+	  
+			   if (page==1) { 
+				 $(this).turn('peel', 'br');
+			   }
+	  
+			 },
+	  
+			 missing: function (event, pages) {
+	  
+			   // Add pages that aren't in the magazine
+	  
+			   for (var i = 0; i < pages.length; i++)
+				 addPage(pages[i], $(this));
+	  
+			 }
+		   }
+	  
+	   });
+	  
+	   // URIs - Format #/page/1 
+	  
+	   Hash.on('^page\/([0-9]*)$', {
+		 yep: function(path, parts) {
+		   var page = parts[1];
+	  
+		   if (page!==undefined) {
+			 if ($('.magazine').turn('is'))
+			   $('.magazine').turn('page', page);
+		   }
+	  
+		 },
+		 nop: function(path) {
+	  
+		   if ($('.magazine').turn('is'))
+			 $('.magazine').turn('page', 1);
+		 }
+	   });
+	  
+	  
+	   $(window).resize(function() {
+		 resizeViewport();
+	   }).bind('orientationchange', function() {
+		 resizeViewport();
+	   });
+	  
+	   // Regions
+	  
+	   if ($.isTouch) {
+		 $('.magazine').bind('touchstart', regionClick);
+	   } else {
+		 $('.magazine').click(regionClick);
+	   }
+	  
+	   // Events for the next button
+	  
+	   $('.next-button').bind($.mouseEvents.over, function() {
+		 
+		 $(this).addClass('next-button-hover');
+	  
+	   }).bind($.mouseEvents.out, function() {
+		 
+		 $(this).removeClass('next-button-hover');
+	  
+	   }).bind($.mouseEvents.down, function() {
+		 
+		 $(this).addClass('next-button-down');
+	  
+	   }).bind($.mouseEvents.up, function() {
+		 
+		 $(this).removeClass('next-button-down');
+	  
+	   }).click(function() {
+		 
+		 $('.magazine').turn('next');
+	  
+	   });
+	  
+	   // Events for the next button
+	   
+	   $('.previous-button').bind($.mouseEvents.over, function() {
+		 
+		 $(this).addClass('previous-button-hover');
+	  
+	   }).bind($.mouseEvents.out, function() {
+		 
+		 $(this).removeClass('previous-button-hover');
+	  
+	   }).bind($.mouseEvents.down, function() {
+		 
+		 $(this).addClass('previous-button-down');
+	  
+	   }).bind($.mouseEvents.up, function() {
+		 
+		 $(this).removeClass('previous-button-down');
+	  
+	   }).click(function() {
+		 
+		 $('.magazine').turn('previous');
+	  
+	   });
+	  
+	   $(document).on("click", ".thumb-slider-holder .image-holder", function(){
+			$('.magazine').turn('page', $(this).index() + 1);
+	   })
+	  
+	   resizeViewport();
+	  
+	   $('.magazine').addClass('animated');
+	  
+	  }
+	  	  
+	  $('#canvas').hide();
+	  
+	  
+	  // Load the HTML4 version if there's not CSS transform
+	  
+	  yepnope({
+	   test : Modernizr.csstransforms,
+	   yep: ['js/turn.min.js'],
+	   nope: ['js/turn.html4.min.js', 'css/jquery.ui.html4.css'],
+	   both: ['css/jquery.ui.css', 'js/magazine.js', 'css/magazine.css'],
+	   complete: loadApp
+	  });
+	</script>
+	<script type="text/javascript" src="js/three.js"></script>
+	<script type="text/javascript" src="js/orbitcontrols.js"></script>
+	<script type="text/javascript" src="js/index.js"></script>
+</body>
+</html>

@@ -1,0 +1,228 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+}
+
+.active-book {
+  overflow: hidden;
+}
+
+.banner-holder {
+  height: 100vh;
+  display: flex;
+}
+
+.banner-video {
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.content-holder {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 50px;
+}
+
+.title-area {
+  display: grid;
+  text-transform: uppercase;
+  color: #89dceb;
+  align-content: center;
+}
+
+.title-area .title {
+  font-size: 155px;
+  margin: 0;
+}
+
+.title-area span {
+  font-size: 20px;
+}
+
+#marsloc {
+  --size: 300px;
+  height: var(--size);
+  width: var(--size);
+  border-radius: var(--size);
+}
+
+.planet-holder {
+  --size: 300px;
+  height: var(--size);
+  position: relative;
+  width: var(--size);
+  overflow: hidden;
+  border-radius: var(--size);
+  border: 1px solid transparent;
+  cursor: -webkit-grab;
+  cursor: grab;
+  box-shadow: 0 0 50px 0 rgb(0, 0, 0);
+}
+
+.planet-holder::after {
+  content: "";
+  height: 100%;
+  width: 100%;
+  background: url("/images/circle-shadow.png");
+  position: absolute;
+  top: -1px;
+  left: 0px;
+  opacity: 0.95;
+  pointer-events: none;
+  background-position: center;
+}
+
+.planet-holder .logo-holdr {
+  position: absolute;
+  z-index: 99;
+  pointer-events: none;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 70%;
+}
+
+.planet-holder .logo-holdr img {
+  width: 100%;
+}
+
+.image-holder {
+  display: flex;
+  width: 100%;
+}
+
+.image-holder img {
+  min-width: 100%;
+  max-width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+canvas {
+  --size: 300px !important;
+  width: var(--size) !important;
+  height: var(--size) !important;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: var(--size) !important;
+}
+
+.flipbook-wrap {
+  position: relative;
+  width: 100%;
+  margin: auto;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  background: #021827;
+  z-index: 9999;
+  opacity: 0;
+  pointer-events: none;
+  position: absolute;
+  transition: 0.3s all;
+  overflow-y: auto;
+}
+
+.flip-panel {
+  display: block;
+  position: relative;
+  width: 100%;
+  max-width: 40%;
+  height: 80vh;
+  margin: auto;
+  perspective: 1200px;
+  left: 20%;
+}
+
+.close-modal-icon {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  cursor: pointer;
+  color: white;
+  z-index: 999999;
+}
+
+.active-book .flipbook-wrap {
+  display: flex;
+  opacity: 1;
+  pointer-events: initial;
+}
+
+.thumbs-list-icon {
+  position: absolute;
+  z-index: 9999;
+  top: 20px;
+  left: 20px;
+  color: white;
+  cursor: pointer;
+  color: white;
+}
+
+.flipbook-modal {
+  opacity: 0;
+  pointer-events: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: #121b38;
+  z-index: 9999;
+  transition: 0.3s all;
+}
+
+.flipbook-show .flipbook-modal {
+  opacity: 1;
+  pointer-events: initial;
+}
+
+@media (max-width: 1280px) {
+  .planet-holder {
+    --size: 260px;
+  }
+  #marsloc {
+    --size: 260px;
+  }
+  canvas {
+    --size: 260px;
+  }
+}
+@media (max-width: 1080px) {
+  .planet-holder {
+    --size: 230px;
+  }
+  #marsloc {
+    --size: 230px;
+  }
+  canvas {
+    --size: 230px;
+  }
+  .title-area .title {
+    font-size: 120px;
+  }
+  .title-area span {
+    font-size: 14px;
+  }
+}
+@media (max-width: 600px) {
+  .planet-holder {
+    --size: 200px;
+  }
+  #marsloc {
+    --size: 200px;
+  }
+  canvas {
+    --size: 200px;
+  }
+  .title-area .title {
+    font-size: 100px;
+  }
+}/*# sourceMappingURL=style.css.map */
