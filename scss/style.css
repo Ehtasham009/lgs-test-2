@@ -71,7 +71,7 @@ body {
   content: "";
   height: 100%;
   width: 100%;
-  background: url("/images/circle-shadow.png");
+  background: url("https://raw.githubusercontent.com/Ehtasham009/lgs-test-2/main/images/circle-shadow.png");
   position: absolute;
   top: -1px;
   left: 0px;
