@@ -8,6 +8,8 @@
 
 @media (max-width: 768px) {
 	.magazine-viewport .container{transform: translate(-50%, -50%) rotate(90deg);}
+	.magazine-viewport .magazine{ width: 80vh !important; height: 80vw !important;}
+
 }
 
 .magazine-viewport .magazine{
