@@ -5,9 +5,11 @@
 	margin:auto;
 	transform: translate(-50%, -50%);
 }
+
 @media (max-width: 992px) {
-	.magazine-viewport{heizght: 100vh !important; width: 100vw !important; overflow: hidden;}
+	.magazine-viewport{height: 100vh !important; width: 100vw !important; overflow: hidden;}
 	.magazine-viewport .container{transform: translate(-50%, -50%) rotate(90deg); width: 80vh !important; height: 80vw !important;}
+	.magazine-viewport .magazine{ width: 80vh !important; height: 80vw !important;}
 }
 
 .magazine-viewport .magazine{
@@ -329,7 +331,7 @@
 
 .magazine-viewport .bottom{position: absolute; bottom: 30px; left: 50%; display: grid; transition: 0.2s all; transform: translateX(-50%); opacity: 0; pointer-events: none;}
 .flipbook-thumbs-show .magazine-viewport .bottom{opacity: 1; pointer-events: initial;}
-.close-thumbs-list{display: flex; justify-self: flex-end; cursor: pointer; margin-bottom: 5px; color: rgb(255, 255, 255);}
+.close-thumbs-list{display: flex; justify-self: flex-end; cursor: pointer; margin-bottom: 5px; color: rgb(221, 221, 221);}
 .magazine-viewport .bottom .thumb-slider-main{width: 100%; max-width: 800px; min-width: 600px; overflow-x: auto;}
 .magazine-viewport .bottom .thumb-slider-holder{padding: 5px; border-radius: 5px; width: 100%; box-shadow: 0 0 5px 0 rgba(0,0,0, 0.2); background: rgb(34, 34, 34); display: flex; margin: auto; width: 100%; max-width: 800px; overflow-x: scroll;}
 .magazine-viewport .bottom .thumb-slider-holder .image-holder{height: 60px; width: 70px; min-width: 70px; background: white; cursor: pointer;}
